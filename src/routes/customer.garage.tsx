@@ -66,7 +66,7 @@ function MyGarage() {
   return (
     <div className="pb-10">
       {!vehicles.length && (
-        <div className="px-4 pt-[72px]">
+        <div className="px-4 pt-4 min-[698px]:pt-[72px]">
           <div className="mb-4 flex justify-end">
             <Button size="sm" onClick={() => toastDemoOnly()}>
               <Plus /> إضافة
@@ -90,7 +90,7 @@ function MyGarage() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/15 to-black/80" />
             <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/90 to-transparent" />
 
-            <div className="relative flex min-h-[min(62dvh,560px)] flex-col pt-[59px]">
+            <div className="relative flex min-h-[min(62dvh,560px)] flex-col pt-0 min-[698px]:pt-[59px]">
               <div className="flex items-center justify-end px-4 py-3">
                 <Button
                   size="sm"

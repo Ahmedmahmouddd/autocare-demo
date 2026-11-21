@@ -80,7 +80,7 @@ export function DemoSidePanel({ current, tips }: { current: "customer" | "partne
 function DynamicIsland() {
   return (
     <div
-      className="pointer-events-none absolute inset-x-0 top-0 z-50 flex h-[59px] items-start justify-center pt-[12px]"
+      className="pointer-events-none absolute inset-x-0 top-0 z-50 hidden h-[59px] items-start justify-center pt-[12px] min-[698px]:flex"
       aria-hidden
     >
       <div
@@ -106,7 +106,7 @@ function InnerBezelMask() {
 
 function HomeIndicator() {
   return (
-    <div className="flex h-[34px] items-end justify-center bg-card pb-2" aria-hidden>
+    <div className="hidden h-[34px] items-end justify-center bg-card pb-2 min-[698px]:flex" aria-hidden>
       <div className="h-[5px] w-[134px] rounded-full bg-[#1c1c1e]" />
     </div>
   );
@@ -216,7 +216,7 @@ export function BottomNav({
 
 export function ScreenHeader({ title, back, right, sub }: { title: string; back?: boolean; right?: ReactNode; sub?: string }) {
   return (
-    <header className="sticky top-0 z-20 shrink-0 border-b border-border bg-background pt-[59px]">
+    <header className="sticky top-0 z-20 shrink-0 border-b border-border bg-background pt-0 min-[698px]:pt-[59px]">
       <div className="flex items-center gap-2 px-4 py-3">
         {back && (
           <button

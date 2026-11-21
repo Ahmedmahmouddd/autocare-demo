@@ -33,10 +33,10 @@ function ProviderPage() {
 
   return (
     <div className="pb-8">
-      <div className="relative h-52 pt-[59px]">
+      <div className="relative h-52 pt-0 min-[698px]:pt-[59px]">
         <img src={PHOTOS[partner.photo]} alt={partner.name} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/50" />
-        <button onClick={() => window.history.back()} aria-label="رجوع" className="absolute start-3 top-[68px] z-10 grid size-9 place-items-center rounded-full bg-card/90 shadow-card"><ArrowLeft className="size-5 rtl:rotate-180" /></button>
+        <button onClick={() => window.history.back()} aria-label="رجوع" className="absolute start-3 top-3 z-10 grid size-9 place-items-center rounded-full bg-card/90 shadow-card min-[698px]:top-[68px]"><ArrowLeft className="size-5 rtl:rotate-180" /></button>
         <div className="absolute bottom-3 left-4 right-4 text-ink-foreground">
           <PartnerTypeBadge type={partner.type} />
           <h1 className="mt-1.5 text-2xl font-black leading-tight">{partner.name}</h1>

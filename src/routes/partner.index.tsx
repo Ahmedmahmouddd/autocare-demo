@@ -40,7 +40,7 @@ function PartnerHome() {
 
   return (
     <div className="pb-6">
-      <div className="bg-ink-gradient px-4 pb-5 pt-[59px] text-ink-foreground">
+      <div className="bg-ink-gradient px-4 pb-5 pt-3 text-ink-foreground min-[698px]:pt-[59px]">
         <div className="eyebrow !text-ink-muted">لوحة الشريك</div>
         {partner && (
           <>

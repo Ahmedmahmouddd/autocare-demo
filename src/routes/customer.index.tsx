@@ -70,7 +70,7 @@ function Explore() {
 
   return (
     <div className="pb-6">
-      <div className="bg-ink-gradient px-4 pb-5 pt-[59px] text-ink-foreground">
+      <div className="bg-ink-gradient px-4 pb-5 pt-3 text-ink-foreground min-[698px]:pt-[59px]">
         <div className="flex items-center justify-between">
           <div>
             <div className="eyebrow !text-ink-muted">مساء الخير، سارة</div>
@@ -94,9 +94,9 @@ function Explore() {
         </Link>
       </div>
 
-      {/* Solid beige safe-area veil — sticks under the island so list cards can't show through */}
-      <div className="pointer-events-none sticky top-0 z-40 h-[59px] bg-background" aria-hidden />
-      <div className="sticky top-[59px] z-50 -mt-[59px] border-b border-border bg-background">
+      {/* Safe-area veil only in framed phone; full-bleed mobile has no notch inset */}
+      <div className="pointer-events-none sticky top-0 z-40 hidden h-[59px] bg-background min-[698px]:block" aria-hidden />
+      <div className="sticky top-0 z-50 border-b border-border bg-background min-[698px]:top-[59px] min-[698px]:-mt-[59px]">
         <div className="no-scrollbar flex gap-2 overflow-x-auto px-4 pt-4 pb-1">
           <button onClick={() => setCat(null)} className={cn("shrink-0 rounded-full border px-3 py-1.5 text-xs font-medium", !cat ? "border-ink bg-ink text-ink-foreground" : "border-border bg-card")}>الكل</button>
           {categories.map((c) => (
